@@ -1,0 +1,13 @@
+<h1>All the users</h1>
+
+{{#each allAccounts}}
+
+    <div style="border: 1px solid black; margin: auto; text-align: center; width: 50%">
+        <p>{{ username }}</p>
+        <p>{{ birthday }}</p>
+        <p>{{ city }}</p>
+        <a href="/activities/{{username}}">See details of this account</a>
+    </div>
+    <br>
+
+{{/each}}

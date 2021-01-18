@@ -1,0 +1,21 @@
+{{#if errors.length}}
+	<ul>
+		{{#each errors}}
+			<li style="display:inline-block; width: 50%; margin: auto; font-family: Helvetica, Arial, sans-serif; border: 3px solid #990000;
+            border-radius: 4px; color: #ff0000; text-decoration: #990000; display:block; height: 50px; text-align: center; 
+            line-height: 50px; background: #ffcccc;">{{this}}</li>
+		{{/each}}
+	</ul></br></br></br></br>
+{{/if}}
+
+<div style="width: 50%; margin: auto;">
+    <h2>Login</h2>
+    <form action="/login" method="POST" >
+        <label>Username:</label></br>
+        <input name="userName" type="text" style="border-radius: 4px" required></br></br>
+        <label>Password:</label></br>
+        <input name="password" type="password" style="border-radius: 4px" required></br></br>
+        <input id="submit" type="submit">
+    </form>
+    <a href="/accounts/subscribe">Not registered ?</a>
+</div>

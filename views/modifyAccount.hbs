@@ -1,0 +1,23 @@
+{{#if errors.length}}
+	<p>Could not sign up because:</p>
+	<ul>
+		{{#each errors}}
+			<li style="display:inline-block; width: 50%; margin: auto; font-family: Helvetica, Arial, sans-serif; border: 3px solid #990000; border-radius: 4px; color: #ff0000; text-decoration: #990000; display:block; height: 50px; text-align: center; line-height: 50px; background: #ffcccc;">{{this}}</li>
+		{{/each}}
+	</ul>
+{{/if}}
+
+<div style="width: 50%; margin: auto;">
+    <h2>Modify account</h2>
+    <form action="/account/modify" method="POST">
+        <label>User name</label></br>
+        <input name="username" type="text" style="border-radius: 4px" value="{{username}}" ></br></br>
+        <label>Birth date</label></br>
+        <input name="birthday" style="border-radius: 4px" type="date" value="{{date}}" ></br></br>
+        <label>City you live in</label></br>
+        <input name="city" style="border-radius: 4px" type="text" value="{{city}}" ></br></br></br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/modifyPassword">Change password</a></br></br>
+    <a href="/account">Cancel</a>
+</div>

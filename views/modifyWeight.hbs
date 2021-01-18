@@ -1,0 +1,10 @@
+<h2>Modify weight</h2>
+<form action="/modifyWeights" method="POST">
+    <label>Date</label>
+    <input name="date" type="date" value="{{date}}" required></br>
+    <label>Weight</label>
+    <input name="weight" type="text" value="{{weight}}" required></br>
+    <input name="id" type="hidden" value="{{id}}">
+    <input type="submit" value="Modify">
+</form>
+<a href="/account">Cancel</a>

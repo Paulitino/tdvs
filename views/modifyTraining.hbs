@@ -1,0 +1,12 @@
+<h2>Modify Training</h2>
+<form action="/modifyTrainings" method="POST">
+    <label>Starting time</label>
+    <input name="start" type="date" value="{{start}}" required></br>
+    <label>Ending time</label>
+    <input name="stop" type="date" value="{{stop}}" required></br>
+    <label>Description</label>
+    <input name="description" type="text" value="{{description}}" required></br>
+    <input name="id" type="hidden" value="{{id}}">
+    <input type="submit" value="Modify">
+</form>
+<a href="/account">Cancel</a>

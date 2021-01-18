@@ -1,0 +1,42 @@
+<h1> {{ username }}'s account</h1>
+<p>{{ birthday }}</p>
+<p>{{ city }}</p>
+
+<a style="float: left;" href="/newWeight">New weight </a><br>
+<a style="float: left;" href="/newTraining">New training </a><br>
+<a style="float: left;" href="/account/modify">Modify profile</a><br>
+
+{{#if allTrainings.length}}
+    <div style="height: 100%; width: 50%; z-index: 1; float: left; overflow: hidden; padding-top: 50px; left:0">
+    <h2 style="margin: auto; text-align: center">Training activities</h2>
+    {{#each allTrainings}}
+
+        <div style="border: 1px solid black; margin: auto; text-align: center; width: 50%">
+            <p>{{ start }}</p>
+            <p>{{ stop }}</p>
+            <p>{{ description }}</p>
+            <a href="/account/activities/modify/{{id}}">Modify</a>
+            <a href="/account/activities/delete/{{id}}">Delete</a>
+        </div>
+        <br>
+
+    {{/each}}
+    </div>
+{{/if}}
+
+{{#if allWeights.length}}
+    <div style="height: 100%; width: 50%; float: right; z-index: 1; overflow: hidden; padding-top: 50px; right:0">
+    <h2 style="margin: auto; text-align: center">Weights</h2>
+    {{#each allWeights}}
+
+        <div style="border: 1px solid black; margin: auto; text-align: center; width: 50%">
+            <p>{{ time }}</p>
+            <p>{{ weight }}</p>
+            <a href="/account/weights/modify/{{id}}">Modify</a>
+            <a href="/account/weights/delete/{{id}}">Delete</a>
+        </div>
+        <br>
+
+    {{/each}}
+    </div>
+{{/if}}

@@ -1,0 +1,11 @@
+<h2>New Training</h2>
+<form action="/newTraining" method="POST">
+    <label>Starting time</label>
+    <input name="start" type="date" value="{{start}}" required></br>
+    <label>Ending time</label>
+    <input name="stop" type="date" value="{{stop}}" required></br>
+    <label>Description</label>
+    <input name="description" type="text" value="{{description}}" required></br>
+    <input type="submit" value="Create">
+</form>
+<a href="/account">Cancel</a>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MyTD</title>
+   </head>
+   <body >
+      <div style="list-style-type:none; padding:0; margin: auto">
+         <!--h1 style="display:inline-block; float: left; margin-right: 1px; min-width:100px; font-family: Helvetica, Arial, sans-serif; color: #fff; text-decoration: none; display:block; height: 50px; text-align: center; line-height: 50px; background: #2f3036;">My Training Diary</h1-->
+         
+         <a style="display:inline-block; float: left; margin-right: 1px; min-width:150px; font-family: Helvetica, Arial, sans-serif; color: #fff; text-decoration: none; display:block; height: 50px; text-align: center; line-height: 50px; background: #2f3036;" href="/">My Training Diary</a>
+         {{#if username}}
+            <a style="display:inline-block; float: left; margin-right: 1px; min-width:100px; font-family: Helvetica, Arial, sans-serif; color: #fff; text-decoration: none; display:block; height: 50px; text-align: center; line-height: 50px; background: #2f3036;" href="/accounts">All accounts</a>
+            <a style="display:inline-block; float: left; margin-right: 1px; min-width:100px; font-family: Helvetica, Arial, sans-serif; color: #fff; text-decoration: none; display:block; height: 50px; text-align: center; line-height: 50px; background: #2f3036;" href="/account">Profile</a>
+         {{/if}}
+
+         {{#unless username}}
+            <a style="display:inline-block; float: left; margin-right: 1px; min-width:100px; font-family: Helvetica, Arial, sans-serif; color: #fff; text-decoration: none; display:block; height: 50px; text-align: center; line-height: 50px; background: #2f3036;" href="/login">Login</a>
+            <a style="display:inline-block; float: left; margin-right: 1px; min-width:100px; font-family: Helvetica, Arial, sans-serif; color: #fff; text-decoration: none; display:block; height: 50px; text-align: center; line-height: 50px; background: #2f3036;" href="/accounts/subscribe">Sign-up</a>
+         {{/unless}}
+
+         {{#if username}}
+            <a style="display:inline-block; float: left; margin-right: 1px; min-width:100px; font-family: Helvetica, Arial, sans-serif; color: #fff; text-decoration: none; display:block; height: 50px; text-align: center; line-height: 50px; background: #2f3036;" href="/logout">Logout</a>
+         {{/if}}
+         <a style="display:inline-block; float: left; margin-right: 1px; min-width:100px; font-family: Helvetica, Arial, sans-serif; color: #fff; text-decoration: none; display:block; height: 50px; text-align: center; line-height: 50px; background: #2f3036;" href="/about">About</a>
+         <a style="display:inline-block; float: left; margin-right: 1px; min-width:100px; font-family: Helvetica, Arial, sans-serif; color: #fff; text-decoration: none; display:block; height: 50px; text-align: center; line-height: 50px; background: #2f3036;" href="/contact">Contact</a>
+
+      </div></br></br></br></br>
+      {{{body}}}
+   </body>
+</html>
